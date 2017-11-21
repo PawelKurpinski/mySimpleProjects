@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    height: 100vp;
+    display: flex;
+}
+
+button {
+    position: absolute;
+    font-family: 'Righteous', cursive;
+    left: 5%;
+    top: 5%;
+    border-radius: 10px;
+    padding: 5px;
+    border-color: black;
+}
+
+ul {
+    margin: auto;
+    transition: opacity 0 5s;
+}
+
+li {
+    font-family: 'Righteous', cursive;
+    color: yellow;
+    display: inline-block;
+    font-size: 70px;
+    letter-spacing: 6px;
+    text-shadow: 0 0 30px white, 0 0 10px yellow;
+}
+
+li:nth-child(5) {
+    transform: rotate(15deg)translateY(4px);
+    animation: neon 5s linear infinite;
+}
+
+.off {
+    opacity: 0;
+}
+
+@keyframes neon {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    30% {
+        opacity: 0.5;
+    }
+    32% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    46% {
+        opacity: 0.5;
+    }
+    54% {
+        opacity: 0.5;
+    }
+    55% {
+        opacity: 1;
+    }
+    77% {
+        opacity: 1;
+    }
+    78% {
+        opacity: 0;
+    }
+    88% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    93% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 0;
+    }
+    97% {
+        opacity: 0;
+    }
+    98% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*
+@keyframes neon {
+    0% {
+        opacity: 0;
+        transform: rotate(15deg)scale(1)
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(30deg) scale(2)
+    }
+}
+*/

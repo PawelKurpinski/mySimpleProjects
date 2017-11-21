@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+header {
+    height: 100vh;
+    background: #BBE4DC;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+
+/*dodaję overflow bo po przesunięciu zdjęcia w prawo nad nim pojawiło się jakieś białe pole; ta właściwość ukrywa wszystko poza zarysem headera; position fixed ze względu na chęć nakładania się warstw header i main Ale UWAGA! fixed sprawia że warstw*/
+
+main {
+    height: 100vh;
+    background-color: gray;
+    margin-top: 100vh;
+    /*margin o 100vh czyli takiej jak wysokość header by main był dokładnie poniże header'a*/
+    position: relative;
+    z-index: 2;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 70%;
+    right: -40%;
+}
+
+header nav {
+    position: absolute;
+    right: 7%;
+    top: 3%;
+    font-size: 3rem;
+}
+
+header hgroup {
+    position: absolute;
+    top: 14%;
+    left: 8%;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3.2rem;
+}
+
+header h3 {
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+#arrow {
+    width: 64px;
+    height: 64px;
+    border: 3px solid black;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 5rem;
+    overflow: hidden;
+    text-shadow: 0 -15px 0 black, 0 -30px 0 black;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+}
+
+#arrow:hover {
+    text-shadow: 0 -15px 0 white, 0 -30px 0 white;
+    color: white;
+    border-color: white;
+}
+
+
+/*wyrównanie grotu strzałki względem kółka*/
+
+.fa-angle-down {
+    -webkit-animation: arrow 3s infinite linear;
+    animation: arrow 3s infinite linear;
+}
+
+@-webkit-keyframes arrow {
+    0% {
+        -webkit-transform: translateY(-80px);
+        transform: translateY(-80px)
+    }
+    50% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px)
+    }
+    100% {
+        -webkit-transform: translateY(80px);
+        transform: translateY(80px)
+    }
+}
+
+@keyframes arrow {
+    0% {
+        -webkit-transform: translateY(-80px);
+        transform: translateY(-80px)
+    }
+    50% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px)
+    }
+    100% {
+        -webkit-transform: translateY(80px);
+        transform: translateY(80px)
+    }
+}
+
+@media (orientation: portrait) {
+    h3 span::after {
+        content: '\A';
+        white-space: pre;
+    }
+    /*wstawiam enter czyli musi być biały znak w widoku portretowym*/
+}
+
+@media (orientation: landscape) {
+    header img {
+        height: 65%;
+        right: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    header h3 {
+        font-size: 2.4rem;
+    }
+    header hgroup {
+        transform: rotate(-15deg);
+    }
+}
+
+@media (min-width:530px) {
+    header img{
+        height: 85%
+    }
+    header h3{
+        font-size: 2.5 rem;
+    }
+}
+@media (min-width:530px) and (orientation: portrait) {}
+
+@media (min-width:530px) {}
+
+@media (min-width:768px) {
+    header h1{
+        font-size: 5rem;
+    }
+    header h3{
+        font-size: 5rem;
+    }
+    #arrow {
+        width: 94px;
+        height: 94px;
+        font-size: 7rem;
+    }
+}
+
+@media (min-width:1024px) {
+    header img{
+        right: -15%;
+    }
+}
+
+@media (min-width:1280px) {}
+
+@media (min-width:1600px) {}
