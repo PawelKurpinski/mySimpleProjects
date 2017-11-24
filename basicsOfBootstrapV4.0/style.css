@@ -23,3 +23,7 @@ html, body{
 .btn-group-lg>.btn, .btn-lg, .form-inline .form-control{
     margin-left: 2px;
 }
+
+.container{
+    text-align: center;
+}
