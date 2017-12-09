@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My numbers</title>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    button{
+        background: #fff;
+        border: 3px solid black;
+        border-radius: 5px;
+        display: block;
+        margin: 20 auto;
+        padding: 10px 20px;
+        font-family: Arial;
+        transition: 0.5s;
+    }
+    button:hover{
+        background: black;
+        color: white;
+    }
+    div{
+        height: 60px;
+        width: 60px;
+        background: cornflowerblue;
+        border-radius: 50%;
+        float: left;
+        text-align: center;
+        line-height: 60px;
+        font-size: 15px;
+        margin: 10px;
+        font-weight: bold;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <button type="button" name="button" id="myButton" onclick="doIt()">My Button</button>
+<div>55</div>
+<p></p>
+
+<script type="text/javascript">
+
+const buttonAction = document.querySelector("button")
+
+function doIt(){
+    document.querySelector("p").createElement = "div";
+}
+</script>
+</body>
+</html>

@@ -24,6 +24,10 @@ html, body{
     margin-left: 2px;
 }
 
-.container{
-    text-align: center;
+.section-content{
+    padding: 5rem 0;
+}
+
+#about{
+    background: url("img/girlincar.jpg");
 }
