@@ -45,16 +45,28 @@
 
 <script type="text/javascript">
 
-let myTab = [];
+const myTab = [];
+const numberMixing = function(){
+    if (myTab.length === 6) return;
+    const mixedNumber = Math.floor(Math.random()*49 + 1);
+
+    for(let i=0, i<myTab.length; i++){
+        if (numberMixing === numberMixing[i]){
+            return
+        }
+    }
+
+    const div = document.createElement("div");
+
+    div.textContent = mixedNumber;
+    myTab.push(mixedNumber);
+    document.body.appendChild(div);
+    }
+}
 
 const buttonAction = document.querySelector("#myButton");
-
 buttonAction.addEventListener("click", doIt);
 
-function doIt(){
-    const div = document.createElement("div");
-    document.body.appendChild(div);
-}
 </script>
 </body>
 </html>
