@@ -51,9 +51,7 @@ const numberMixing = function(){
     const mixedNumber = Math.floor(Math.random()*49 + 1);
 
     for(let i=0; i<myTab.length; i++){
-        if (numberMixing === numberMixing[i]){
-            return
-        }
+        if (numberMixing === numberMixing[i])return;
     }
 
     const div = document.createElement("div");
