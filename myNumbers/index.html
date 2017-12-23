@@ -39,7 +39,7 @@
 </style>
 </head>
 <body>
-    <button type="button" name="button" id="myButton" onclick="doIt()">My Button</button>
+    <button type="button" name="button" id="myButton">My Button</button>
 <!-- <div>55</div> -->
 <p></p>
 
@@ -50,7 +50,7 @@ const numberMixing = function(){
     if (myTab.length === 6) return;
     const mixedNumber = Math.floor(Math.random()*49 + 1);
 
-    for(let i=0, i<myTab.length; i++){
+    for(let i=0; i<myTab.length; i++){
         if (numberMixing === numberMixing[i]){
             return
         }
@@ -62,10 +62,10 @@ const numberMixing = function(){
     myTab.push(mixedNumber);
     document.body.appendChild(div);
     }
-}
+
 
 const buttonAction = document.querySelector("#myButton");
-buttonAction.addEventListener("click", doIt);
+buttonAction.addEventListener("click", numberMixing);
 
 </script>
 </body>
